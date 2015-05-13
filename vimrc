@@ -12,13 +12,14 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'walm/jshint.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'baskerville/bubblegum'
 
 Bundle 'bling/vim-airline'
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
 let g:airline_detect_paste=1
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#syntastic#enabled=1
 
 Bundle 'scrooloose/nerdtree'
 map ,t <ESC>:NERDTreeToggle<CR>
