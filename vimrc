@@ -1,27 +1,32 @@
-" vimrc
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'walm/jshint.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'baskerville/bubblegum'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
-" Bundles
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'walm/jshint.vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'baskerville/bubblegum'
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-Bundle 'bling/vim-airline'
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
 let g:airline_detect_paste=1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#syntastic#enabled=1
 
-Bundle 'scrooloose/nerdtree'
 map ,t <ESC>:NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1       " Destaca a linha atual
 let NERDTreeShowHidden=1                " Lista arquivos ocultos
@@ -29,13 +34,8 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore=['\.*swp$', '^\.git$']          " Arquivos que não serão exibidos.
 
-Bundle 'kien/ctrlp.vim'
 nnoremap ,f :CtrlP<CR>
 let g:ctrlp_working_path_mode='' "Pesquisa a partir do diretório atual no Vim.
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 colorscheme Tomorrow-Night
 
